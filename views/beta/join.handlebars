@@ -1,0 +1,106 @@
+
+
+<div class="wrapper">
+    <div class="page-header page-header-small">
+        <div class="page-header-image" data-parallax="true" style="background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);">
+        </div>
+        <div class="content-center">
+            <div class="container">
+                <h1 class="title">Join Beta Program</h1>
+                <p class="lead">Let's make it even more better with your help.</p>
+                <div class="text-center">
+                    <button class="btn btn-info btn-lg" data-toggle="modal" data-target="#referModal">Refer Somebody</button>
+                    <button class="btn btn-info btn-lg" data-toggle="modal" data-target="#forgotModal">Forgot Referral
+                        Code</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="referModal" tabindex="-1" role="dialog" aria-labelledby="referModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Do you want to refer somebody?</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    The referral code was sent to you when you registered in the Beta Program, ask your referrals to
+                    use it while Signup. If you haven't signed up yet, do it below.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="forgotModal" tabindex="-1" role="dialog" aria-labelledby="forgotModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content content-center">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Have you forgotten your referral code or lost it?</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <span class="mb-3">
+                        No problem it happens. Please enter your email ID which you registered with and we'll send it
+                        out to you again.
+                    </span>
+
+                    <form action="/beta/forgotCode" method="post">
+                        <div class="form-group">
+                            <input type="email" name="forgotEmail" id="" class="form-control" required="true"
+                                placeholder="Email" value="{{forgotEmail}}">
+                        </div>
+                        <center>
+                            <button class="btn btn-info" type="submit">Send Code</button>
+                        </center>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section section-about-us">
+        <div class="container">
+            <div class="row mb-3">
+                <div class="col-md-8 ml-auto mr-auto text-center">
+                    <h2 class="title">Register for Beta</h2>
+                    <h5 class="description">We've got a pre-released version for you smart-one's to help us get even
+                        better. You'll get your rewards once we release. For more information on rewards please click
+                        <a href="/beta">here</a>.</h5>
+                </div>
+            </div>
+            <center>
+                <form action="/beta/join" method="post">
+                    <div class="form-group"><input type="text" name="firstname" id="" class="form-control" placeholder="First Name"
+                           style="width: 50%;" value="{{firstName}}"></div>
+
+                    <div class="form-group"><input type="text" name="lastname" id="" class="form-control" placeholder="Last Name"
+                           style="width: 50%;" value="{{lastName}}"></div>
+
+                    <div class="form-group"><input type="email" name="email" id="" class="form-control" placeholder="Email" style="width: 50%;" value="{{email}}"></div>
+
+                    <div class="form-group"><input type="text" name="referralCode" id="" class="form-control" placeholder="Referral Code(if any)" style="width: 50%;"></div>
+
+                    <button type="submit" class="btn btn-info">Register</button>
+                </form>
+            </center>
+
+        </div>
+    </div>
+</div>
+
+<script>
+{{#if error}}
+  swal ( "Oops" ,  "{{error}}" ,  "error" )
+{{/if}}
+{{#if success}}
+    swal ( "Yeah" , "{{success}}", "success" )
+{{/if}}
+</script>
+
