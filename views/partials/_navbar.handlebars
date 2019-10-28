@@ -3,7 +3,7 @@
     <div class="container">
       <div class="navbar-translate">
         <a class="navbar-brand" rel="tooltip" title="Hi!" data-placement="bottom">
-          Dhruv Bhatia
+          <p id="nav">Dhruv Bhatia</p>
         </a>
         <button class="navbar-toggler navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
           aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
@@ -15,9 +15,15 @@
       <div class="collapse navbar-collapse justify-content-end" id="navigation" data-nav-image="./assets/img/blurred-image-1.jpg">
         <ul class="navbar-nav">
           <li class="nav-item">
-              <a onclick="javascript:document.getElementById('home').scrollIntoView({behavior: 'smooth'});" class="nav-link">Home</a>
-              <a onclick="javascript:document.getElementById('about').scrollIntoView({behavior: 'smooth'});" class="nav-link">About</a>
-              <a onclick="javascript:document.getElementById('works').scrollIntoView({behavior: 'smooth'});" class="nav-link">Works</a>
+              <a onclick="javascript:document.getElementById('home').scrollIntoView({behavior: 'smooth'});" class="nav-link">
+                <p id="nav">Home</p>
+                </a>
+              <a onclick="javascript:document.getElementById('about').scrollIntoView({behavior: 'smooth'});" class="nav-link">
+                <p id="nav">About</p>
+                </a>
+              <a onclick="javascript:document.getElementById('works').scrollIntoView({behavior: 'smooth'});" class="nav-link">
+                <p id="nav">Works</p>
+                </a>
             </a>
           </li>
           {{!-- <li class="nav-item">
