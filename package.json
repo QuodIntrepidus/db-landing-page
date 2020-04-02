@@ -1,12 +1,12 @@
 {
-  "name": "shimasu-landing-node",
+  "name": "db-landing-page",
   "version": "1.0.0",
-  "description": "Shimasu landing page code.",
+  "description": "Dhruv's website",
   "main": "app.js",
   "scripts": {
     "start": "node app.js"
   },
-  "author": "Utkarsh Dubey",
+  "author": "Dhruv Bhatia",
   "license": "MIT",
   "dependencies": {
     "body-parser": "^1.18.3",
