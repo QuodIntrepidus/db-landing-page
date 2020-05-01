@@ -16,12 +16,12 @@ const db = require('./config/database');
 // Map global promise - get rid of warning
 mongoose.Promise = global.Promise;
 
-// Connect to mongoose
-mongoose.connect(db.mongoURI, {
-        useNewUrlParser: true
-    })
-    .then(() => console.log('MongoDB Connected...'))
-    .catch(err => console.log(err));
+// // Connect to mongoose
+// mongoose.connect(db.mongoURI, {
+//         useNewUrlParser: true
+//     })
+//     .then(() => console.log('MongoDB Connected...'))
+//     .catch(err => console.log(err));
 
 // Body parser middleware
 app.use(bodyParser.urlencoded({ extended: false }));
