@@ -282,8 +282,7 @@ body {
   .nice a {
     position: absolute;
     bottom: 20%;
-    left: 50%;
-    align-self: center;
+    right: 50%;
     z-index: 2;
     display: inline-block;
     -webkit-transform: translate(0, -50%);
